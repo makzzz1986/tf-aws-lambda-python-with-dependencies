@@ -9,9 +9,9 @@ variable pip_dependencies {
 }
 
 variable temp_package_folder {
-  default = "/tmp/python_lambda_package"
+  default = "python_lambda_package"
 }
 
-variable package_path {
-  default = "/tmp/package.zip"
+variable package_filename {
+  default = "package.zip"
 }

@@ -8,7 +8,7 @@ Terraform module for packaging Python script and it's dependecies to one zip fil
 
 ```
 module lambda_dep {
-  source           = "git::ssh://git@mygitlab.org/tf-aws-lambda-python-dependencies"
+  source           = "github.com/makzzz1986/tf-aws-lambda-python-with-dependencies"
   script_path      = "${path.module}/files/helloworld.py"
   pip_dependencies = ["zipfile36==0.1.3"]
 }
@@ -36,7 +36,7 @@ resource aws_lambda_function test_lambda {
 | script_path | Path to your script relative to Terraform entrypoint | string | - | Yes |
 | pip_dependencies | List of dependencies in pip3 format, better use with locked version | list | - | Yes |
 | temp_package_folder | Folder for building your package | string | `/tmp/python_lambda_package` | No |
-| package_path  | In case you want to specify zip filename | string | `package.zip` | No |
+| package_filename  | In case you want to specify zip filename | string | `package.zip` | No |
 
 ## Outputs
 
