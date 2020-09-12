@@ -24,8 +24,6 @@ resource aws_lambda_function hello_world {
   runtime          = "python3.8"
   timeout          = 120
   publish          = true
-
-  tags = var.tags
 }
 ```
 
