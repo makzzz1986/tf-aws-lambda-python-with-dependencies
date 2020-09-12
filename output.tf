@@ -1,5 +1,5 @@
 output package_path {
-  value = var.package_path
+  value = data.null_data_source.packaging_changes.outputs["package_path"]
 }
 
 output package_sha {
